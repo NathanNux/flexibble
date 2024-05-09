@@ -31,9 +31,7 @@
     "grafbase": "^0.24.1"
   },
   "devDependencies": {
-    "@grafbase/sdk": "^0.0.25",
     "dotenv": "^16.4.5",
-    "find-unused-exports": "^5.0.0",
-    "grafbase": "^0.24.1"
+    "find-unused-exports": "^5.0.0"
   }
 }
