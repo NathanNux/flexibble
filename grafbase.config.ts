@@ -35,6 +35,8 @@ export default config({
   },
 })
 
+// Path: grafbase.config.ts
+
 
 // import { graph , config, auth } from '@grafbase/sdk';
 
