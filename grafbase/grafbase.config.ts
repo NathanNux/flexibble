@@ -8,7 +8,7 @@ const User = g.model('User', {
   description: g.string().length({ min: 2, max: 1000 }).optional(),
   githubUrl: g.url().optional(),
   linkedinUrl: g.url().optional(), 
-  projects: g.relation(() => Project).list().optional(), //in never type that is ref not relation
+  projects: g.relation(() => Project).list().optional(),
 }).auth((rules) => {
   rules.public().read()
 })
@@ -27,15 +27,16 @@ const Project = g.model('Project', {
   rules.private().create().delete().update()
 })
 
-// const jwt = auth.JWT({
-//   issuer: 'grafbase',
-//   secret:  g.env('NEXTAUTH_SECRET')
-// })
+const jwt = auth.JWT({
+  issuer: 'grafbase',
+  secret:  g.env('NEXTAUTH_SECRET')
+})
 
 export default config({
   schema: g,
-  // auth: {
-  //   providers: [jwt],
-  //   rules: (rules) => rules.private()
-  // },
+  auth: {
+    providers: [jwt],
+    rules: (rules) => rules.private()
+  },
 })
+

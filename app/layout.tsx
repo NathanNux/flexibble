@@ -1,19 +1,15 @@
-import type { Metadata } from "next";
 import "./globals.css";
-import { Footer, Navbar } from "@/components";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Flexibble",
-  description: "Showcase and discover projects built with Flexibble by developers",
+  description: "Showcase and discover remarkable developer projects",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body>
         <Navbar />
         <main>
